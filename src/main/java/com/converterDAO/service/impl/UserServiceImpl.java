@@ -19,9 +19,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User getUserByLogin(String login) {
-        return userRepository.getUserByLogin(login);
+    public User findByLogin(String login) {
+        return userRepository.findByLogin(login);
     }
+
+
 
     @Override
     @Transactional
@@ -34,8 +36,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public boolean isJoinedLogin(String login) {
-        User user = userRepository.getUserByLogin(login);
+    public boolean isValidUser(String login) {
+        User user = userRepository.findByLogin(login);
         if(user != null)
             return true;
         else return false;

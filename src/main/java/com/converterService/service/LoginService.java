@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
  * Created by hp on 04.01.2017.
  */
 @Controller
-public class LoginController {
+public class LoginService {
     //@Autowired
     //private UserService userService;
 

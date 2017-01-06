@@ -8,9 +8,9 @@ import com.exception.UserNotFoundException;
  */
 public interface UserService {
 
-    User getUserByLogin(String login);
+    User findByLogin(String login);
     User getUserById(Long id) throws UserNotFoundException;
-    boolean isJoinedLogin(String login);
+    boolean isValidUser(String login);
     User addUser(User user);
 
 }
