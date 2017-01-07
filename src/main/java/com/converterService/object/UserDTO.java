@@ -12,7 +12,7 @@ public class UserDTO {
     Long id;
     String login;
     String password;
-    ArrayList<AccountDTO> accounts;
+   // ArrayList<AccountDTO> accounts;
 
     UserDTO(){}
 
@@ -20,9 +20,9 @@ public class UserDTO {
         this.login = user.getLogin();
         this.password = user.getPassword();
         this.id = user.getId();
-        for (int i =0; i < user.getAccounts().size(); i++){
-            this.accounts.add(new AccountDTO(user.getAccounts().get(i)));
-        }
+//        for (int i =0; i < user.getAccounts().size(); i++){
+//            this.accounts.add(new AccountDTO(user.getAccounts().get(i)));
+//        }
     }
 
     public Long getId(){
@@ -37,7 +37,7 @@ public class UserDTO {
         return this.password;
     }
 
-    public ArrayList<AccountDTO> getAccounts(){
-        return this.accounts;
-    }
+   // public ArrayList<AccountDTO> getAccounts(){
+      //  return this.accounts;
+   // }
 }
