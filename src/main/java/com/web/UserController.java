@@ -45,7 +45,7 @@ public class UserController {
 
         securityService.autoLogin(userForm.getLogin(), userForm.getPasswordConfirm());
 
-        return "redirect:/welcome";
+        return "redirect:/converter";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -59,9 +59,9 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "/converter"}, method = RequestMethod.GET)
     public String welcome() {
-        return "welcome";
+        return "converter";
     }
 
 }

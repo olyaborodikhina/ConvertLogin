@@ -1,7 +1,5 @@
 package com.converterDAO.entity;
 
-import com.converterDAO.entity.User;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
