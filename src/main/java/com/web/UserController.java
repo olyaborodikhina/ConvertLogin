@@ -48,6 +48,11 @@ public class UserController {
         return "redirect:/converter";
     }
 
+    @RequestMapping(value = {"/", "/converter"}, method = RequestMethod.GET)
+    public String converter() {
+        return "converter";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null)
@@ -55,13 +60,7 @@ public class UserController {
 
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
-
         return "login";
-    }
-
-    @RequestMapping(value = {"/", "/converter"}, method = RequestMethod.GET)
-    public String welcome() {
-        return "converter";
     }
 
 }

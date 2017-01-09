@@ -3,6 +3,7 @@ package com.converterDAO.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Currency;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,9 +18,6 @@ public class Account implements Serializable {
     private Map<Currency,Long> balance;
     private Set<User> users;
 
-    @ManyToOne
-    private User user;
-
     public Account(){}
 
     @Id
@@ -28,7 +26,7 @@ public class Account implements Serializable {
        return this.id;
     }
 
-    public Map<Currency, Long> getBalance(){
+    public Map<Currency,Long> getBalance(){
        return  this.balance;
     }
 

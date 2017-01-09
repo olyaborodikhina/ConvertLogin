@@ -25,7 +25,9 @@
 </head>
 <body>
 <td><div align="right">
+    <form action="/logout" method="post">
     <h2> <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+    </form>
 </div></td>
 
 <table class="header_user_pricebox">
